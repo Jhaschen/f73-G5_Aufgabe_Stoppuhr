@@ -99,7 +99,7 @@ int main()
 		}
 		totalTime=OvCnt; // Zwischenspeichern des Overflow Zählers in ms
 		ledClear(8);
-		printf("\r\nZeitmessung: %u ms\r\n",totalTime);// Ausgabe
+		printf("\r\nZeitmessung: %32lu ms\r\n",(unsigned long)totalTime);// Ausgabe
 			
 
 	}
