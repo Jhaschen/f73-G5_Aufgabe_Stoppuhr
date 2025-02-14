@@ -13,7 +13,7 @@
 
 // Überlaufzähler - global damit sowohl von der ISR wie aus den Funktionen
 //                  darauf zugegriffen werden kann
-volatile uint16_t OvCnt = 0;
+volatile uint32_t OvCnt = 0;
 
 
 
@@ -77,11 +77,11 @@ int main()
 	// Init Timer0 Compare ISR
 	Timer0_COMP_ISR_init();
 	
-	printf("Stoppuhr\r\n");
+	printf("\r\nStoppuhr\r\n");
 	printf("Start Button 1 druecken\r\n");
 	printf("Stopp Button 2 druecken\r\n\r\n");
     
-	uint16_t totalTime=0;
+	uint32_t totalTime=0; // Laufzeit 2^32 => ca. 49 Tage
 
 	while (1)
 	{
